@@ -1,0 +1,27 @@
+<Solution>
+    <Folder Name="/src/">
+        <Project Path="src/ModularWolverine.ApiService/ModularWolverine.ApiService.csproj" />
+    </Folder>
+    <Folder Name="/src/Aspire/">
+        <Project Path="src/Aspire/ModularWolverine.AppHost/ModularWolverine.AppHost.csproj" />
+        <Project Path="src/Aspire/ModularWolverine.ServiceDefaults/ModularWolverine.ServiceDefaults.csproj" />
+    </Folder>
+    <Folder Name="/src/BuildingBlocks/">
+        <Project Path="src/BuildingBlocks/Application/ModulaWolverine.BuildingBlocks.Application.csproj" />
+        <Project Path="src/BuildingBlocks/Domain/ModulaWolverine.BuildingBlocks.Domain.csproj" />
+        <Project Path="src/BuildingBlocks/Infrastructure/ModulaWolverine.BuildingBlocks.Infrastructure.csproj" />
+    </Folder>
+    <Folder Name="/src/Modules/" />
+    <Folder Name="/src/Modules/Devices/">
+        <Project Path="src/Modules/Devices/ModularWolverine.Modules.Devices.Application/ModularWolverine.Modules.Devices.Application.csproj" />
+        <Project Path="src/Modules/Devices/ModularWolverine.Modules.Devices.Domain/ModularWolverine.Modules.Devices.Domain.csproj" />
+        <Project Path="src/Modules/Devices/ModularWolverine.Modules.Devices.Infrastructure/ModularWolverine.Modules.Devices.Infrastructure.csproj" />
+        <Project Path="src/Modules/Devices/ModularWolverine.Modules.Devices.IntegrationEvents/ModularWolverine.Modules.Devices.IntegrationEvents.csproj" />
+    </Folder>
+    <Folder Name="/src/Modules/Telematics/">
+        <Project Path="src/Modules/Telematics/ModularWolverine.Modules.Telematics.Application/ModularWolverine.Modules.Telematics.Application.csproj" />
+        <Project Path="src/Modules/Telematics/ModularWolverine.Modules.Telematics.Domain/ModularWolverine.Modules.Telematics.Domain.csproj" />
+        <Project Path="src/Modules/Telematics/ModularWolverine.Modules.Telematics.Infrastructure/ModularWolverine.Modules.Telematics.Infrastructure.csproj" />
+        <Project Path="src/Modules/Telematics/ModularWolverine.Modules.Telematics.IntegrationEvents/ModularWolverine.Modules.Telematics.IntegrationEvents.csproj" />
+    </Folder>
+</Solution>

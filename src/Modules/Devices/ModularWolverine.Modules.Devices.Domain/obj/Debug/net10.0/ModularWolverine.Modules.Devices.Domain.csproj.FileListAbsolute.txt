@@ -1,0 +1,11 @@
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Devices/ModularWolverine.Modules.Devices.Domain/bin/Debug/net10.0/ModularWolverine.Modules.Devices.Domain.deps.json
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Devices/ModularWolverine.Modules.Devices.Domain/bin/Debug/net10.0/ModularWolverine.Modules.Devices.Domain.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Devices/ModularWolverine.Modules.Devices.Domain/bin/Debug/net10.0/ModularWolverine.Modules.Devices.Domain.pdb
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Devices/ModularWolverine.Modules.Devices.Domain/obj/Debug/net10.0/ModularWolverine.Modules.Devices.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Devices/ModularWolverine.Modules.Devices.Domain/obj/Debug/net10.0/ModularWolverine.Modules.Devices.Domain.AssemblyInfoInputs.cache
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Devices/ModularWolverine.Modules.Devices.Domain/obj/Debug/net10.0/ModularWolverine.Modules.Devices.Domain.AssemblyInfo.cs
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Devices/ModularWolverine.Modules.Devices.Domain/obj/Debug/net10.0/ModularWolverine.Modules.Devices.Domain.csproj.CoreCompileInputs.cache
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Devices/ModularWolverine.Modules.Devices.Domain/obj/Debug/net10.0/ModularWolverine.Modules.Devices.Domain.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Devices/ModularWolverine.Modules.Devices.Domain/obj/Debug/net10.0/refint/ModularWolverine.Modules.Devices.Domain.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Devices/ModularWolverine.Modules.Devices.Domain/obj/Debug/net10.0/ModularWolverine.Modules.Devices.Domain.pdb
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Devices/ModularWolverine.Modules.Devices.Domain/obj/Debug/net10.0/ref/ModularWolverine.Modules.Devices.Domain.dll

@@ -1,0 +1,12 @@
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/ModualarWolverine.ServiceDefaults/bin/Debug/net10.0/ModualarWolverine.ServiceDefaults.deps.json
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/ModualarWolverine.ServiceDefaults/bin/Debug/net10.0/ModualarWolverine.ServiceDefaults.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/ModualarWolverine.ServiceDefaults/bin/Debug/net10.0/ModualarWolverine.ServiceDefaults.pdb
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/ModualarWolverine.ServiceDefaults/obj/Debug/net10.0/ModualarWolverine.ServiceDefaults.csproj.AssemblyReference.cache
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/ModualarWolverine.ServiceDefaults/obj/Debug/net10.0/ModualarWolverine.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/ModualarWolverine.ServiceDefaults/obj/Debug/net10.0/ModualarWolverine.ServiceDefaults.AssemblyInfoInputs.cache
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/ModualarWolverine.ServiceDefaults/obj/Debug/net10.0/ModualarWolverine.ServiceDefaults.AssemblyInfo.cs
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/ModualarWolverine.ServiceDefaults/obj/Debug/net10.0/ModualarWolverine.ServiceDefaults.csproj.CoreCompileInputs.cache
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/ModualarWolverine.ServiceDefaults/obj/Debug/net10.0/ModualarWolverine.ServiceDefaults.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/ModualarWolverine.ServiceDefaults/obj/Debug/net10.0/refint/ModualarWolverine.ServiceDefaults.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/ModualarWolverine.ServiceDefaults/obj/Debug/net10.0/ModualarWolverine.ServiceDefaults.pdb
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/ModualarWolverine.ServiceDefaults/obj/Debug/net10.0/ref/ModualarWolverine.ServiceDefaults.dll

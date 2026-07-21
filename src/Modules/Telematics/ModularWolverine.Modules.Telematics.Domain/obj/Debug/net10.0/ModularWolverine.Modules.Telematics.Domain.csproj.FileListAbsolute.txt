@@ -1,0 +1,11 @@
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Domain/bin/Debug/net10.0/ModularWolverine.Modules.Telematics.Domain.deps.json
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Domain/bin/Debug/net10.0/ModularWolverine.Modules.Telematics.Domain.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Domain/bin/Debug/net10.0/ModularWolverine.Modules.Telematics.Domain.pdb
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Domain/obj/Debug/net10.0/ModularWolverine.Modules.Telematics.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Domain/obj/Debug/net10.0/ModularWolverine.Modules.Telematics.Domain.AssemblyInfoInputs.cache
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Domain/obj/Debug/net10.0/ModularWolverine.Modules.Telematics.Domain.AssemblyInfo.cs
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Domain/obj/Debug/net10.0/ModularWolverine.Modules.Telematics.Domain.csproj.CoreCompileInputs.cache
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Domain/obj/Debug/net10.0/ModularWolverine.Modules.Telematics.Domain.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Domain/obj/Debug/net10.0/refint/ModularWolverine.Modules.Telematics.Domain.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Domain/obj/Debug/net10.0/ModularWolverine.Modules.Telematics.Domain.pdb
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Domain/obj/Debug/net10.0/ref/ModularWolverine.Modules.Telematics.Domain.dll

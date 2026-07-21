@@ -1,0 +1,17 @@
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/bin/Debug/net10.0/ModularWolverine.Modules.Telematics.Application.deps.json
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/bin/Debug/net10.0/ModularWolverine.Modules.Telematics.Application.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/bin/Debug/net10.0/ModularWolverine.Modules.Telematics.Application.pdb
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/bin/Debug/net10.0/ModularWolverine.Modules.Telematics.Domain.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/bin/Debug/net10.0/ModularWolverine.Modules.Telematics.IntegrationEvents.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/bin/Debug/net10.0/ModularWolverine.Modules.Telematics.Domain.pdb
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/bin/Debug/net10.0/ModularWolverine.Modules.Telematics.IntegrationEvents.pdb
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/obj/Debug/net10.0/ModularWolverine.Modules.Telematics.Application.csproj.AssemblyReference.cache
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/obj/Debug/net10.0/ModularWolverine.Modules.Telematics.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/obj/Debug/net10.0/ModularWolverine.Modules.Telematics.Application.AssemblyInfoInputs.cache
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/obj/Debug/net10.0/ModularWolverine.Modules.Telematics.Application.AssemblyInfo.cs
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/obj/Debug/net10.0/ModularWolverine.Modules.Telematics.Application.csproj.CoreCompileInputs.cache
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/obj/Debug/net10.0/ModularW.D40DB906.Up2Date
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/obj/Debug/net10.0/ModularWolverine.Modules.Telematics.Application.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/obj/Debug/net10.0/refint/ModularWolverine.Modules.Telematics.Application.dll
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/obj/Debug/net10.0/ModularWolverine.Modules.Telematics.Application.pdb
+/home/dpokrovskyi/RiderProjects/ModualarWolverine/src/modules/Telematics/ModularWolverine.Modules.Telematics.Application/obj/Debug/net10.0/ref/ModularWolverine.Modules.Telematics.Application.dll
