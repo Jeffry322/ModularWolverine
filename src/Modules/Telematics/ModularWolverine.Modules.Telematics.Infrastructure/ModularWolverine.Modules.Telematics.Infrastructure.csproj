@@ -11,5 +11,12 @@
         <ProjectReference Include="../ModularWolverine.Modules.Telematics.Domain/ModularWolverine.Modules.Telematics.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" />
+      <PackageReference Include="EFCore.NamingConventions" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+      <PackageReference Include="WolverineFx" />
+    </ItemGroup>
+
 </Project>
 

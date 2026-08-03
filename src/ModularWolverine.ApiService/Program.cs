@@ -1,27 +1,34 @@
-using DevicesApplication = ModularWolverine.Modules.Devices.Application;
-using TelematicsApplication = ModularWolverine.Modules.Telematics.Application;
+using ModularWolverine.Modules.Devices.Infrastructure;
+using ModularWolverine.Modules.Telematics.Infrastructure;
+using ModularWolverine.Modules.Devices.Application;
+using ModularWolverine.Modules.Telematics.Application;
 using Wolverine;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseWolverine(options =>
 {
-    options.Discovery.IncludeAssembly(typeof(DevicesApplication.AssemblyReference).Assembly);
-    options.Discovery.IncludeAssembly(typeof(TelematicsApplication.AssemblyReference).Assembly);
+    options.UseRuntimeCompilation();
+    options.Discovery.IncludeAssembly(typeof(ModularWolverine.Modules.Devices.Application.AssemblyReference).Assembly);
+    options.Discovery.IncludeAssembly(typeof(ModularWolverine.Modules.Telematics.Application.AssemblyReference).Assembly);
 });
 
-// Add service defaults & Aspire client integrations.
 builder.AddServiceDefaults();
 
-// Add services to the container.
 builder.Services.AddProblemDetails();
 
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+builder.AddDevicesModule(builder);
+
+builder.AddTelematicsModule(builder);
+
+builder.Services.AddScoped<ITelematicsEntrypoint, TelematicsEntrypoint>();
+
+builder.Services.AddScoped<IDevicesEntrypoint, DevicesEntrypoint>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 app.UseExceptionHandler();
 
 if (app.Environment.IsDevelopment())
