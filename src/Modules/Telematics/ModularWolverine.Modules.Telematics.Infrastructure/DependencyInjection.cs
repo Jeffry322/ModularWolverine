@@ -20,6 +20,12 @@ public static class DependencyInjection
                 configureDbContextOptions: opts =>
                 {
                     opts.UseSnakeCaseNamingConvention();
+                    opts.UseNpgsql(npgsql =>
+                    {
+                        npgsql.MigrationsHistoryTable(
+                            "__EFMigrationsHistory",
+                            TelematicsDbContext.Schema);
+                    });
                 });
             return appBuilder;
         }

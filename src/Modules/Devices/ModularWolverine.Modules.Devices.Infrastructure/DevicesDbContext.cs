@@ -1,11 +1,15 @@
 using Microsoft.EntityFrameworkCore;
+using ModularWolverine.Modules.Devices.Application.Common.Contracts;
+using ModularWolverine.Modules.Devices.Domain.Devices;
 
 namespace ModularWolverine.Modules.Devices.Infrastructure;
 
 public sealed class DevicesDbContext(DbContextOptions<DevicesDbContext> options)
-    : DbContext(options)
+    : DbContext(options), IDevicesDbContext
 {
     public const string Schema = "devices";
+    
+    public DbSet<Device> Devices { get; set; }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

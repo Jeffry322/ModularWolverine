@@ -15,7 +15,11 @@
     <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.15.2" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.15.1" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.15.1" />
-    <PackageVersion Include="WolverineFx" Version="6.24.1" />
+    <PackageVersion Include="Scalar.AspNetCore" Version="2.17.3" />
+    <PackageVersion Include="WolverineFx" Version="6.25.3" />
+    <PackageVersion Include="WolverineFx.EntityFrameworkCore" Version="6.25.3" />
+    <PackageVersion Include="WolverineFx.Http" Version="6.25.3" />
+    <PackageVersion Include="WolverineFx.Postgresql" Version="6.25.3" />
     <PackageVersion Include="WolverineFx.RuntimeCompilation" Version="6.24.1" />
   </ItemGroup>
 </Project>

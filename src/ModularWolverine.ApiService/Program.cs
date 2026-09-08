@@ -1,8 +1,14 @@
 using ModularWolverine.Modules.Devices.Infrastructure;
 using ModularWolverine.Modules.Telematics.Infrastructure;
 using ModularWolverine.Modules.Devices.Application;
+using ModularWolverine.Modules.Devices.Application.Common.Contracts;
 using ModularWolverine.Modules.Telematics.Application;
+using ModulaWolverine.BuildingBlocks.Domain;
+using Scalar.AspNetCore;
 using Wolverine;
+using Wolverine.EntityFrameworkCore;
+using Wolverine.Http;
+using Wolverine.Postgresql;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,11 +17,27 @@ builder.Host.UseWolverine(options =>
     options.UseRuntimeCompilation();
     options.Discovery.IncludeAssembly(typeof(ModularWolverine.Modules.Devices.Application.AssemblyReference).Assembly);
     options.Discovery.IncludeAssembly(typeof(ModularWolverine.Modules.Telematics.Application.AssemblyReference).Assembly);
+    
+    var connectionString = builder.Configuration.GetConnectionString("modular-wolverine")!;
+
+    options.PersistMessagesWithPostgresql(connectionString, "wolverine");
+
+    options.Policies.UseDurableLocalQueues();
+    
+    options.Services.AddScoped<IDevicesDbContext>(sp =>
+        sp.GetRequiredService<DevicesDbContext>());
+    
+    options.UseEntityFrameworkCoreTransactions()
+        .WithDbContextAbstraction<IDevicesDbContext, DevicesDbContext>();
+
+    options.PublishDomainEventsFromEntityFrameworkCore<Entity>(entity => entity.DomainEvents);
 });
 
 builder.AddServiceDefaults();
 
 builder.Services.AddProblemDetails();
+
+builder.Services.AddWolverineHttp();
 
 builder.Services.AddOpenApi();
 
@@ -31,36 +53,15 @@ var app = builder.Build();
 
 app.UseExceptionHandler();
 
+app.MapWolverineEndpoints();
+
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
 
-string[] summaries =
-    ["Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"];
-
-app.MapGet("/", () => "API service is running. Navigate to /weatherforecast to see sample data.");
-
-app.MapGet("/weatherforecast",
-        () =>
-        {
-            var forecast = Enumerable.Range(1, 5)
-                .Select(index => new WeatherForecast(DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                    Random.Shared.Next(-20, 55),
-                    summaries[Random.Shared.Next(summaries.Length)]))
-                .ToArray();
-            return forecast;
-        })
-    .WithName("GetWeatherForecast");
+app.MapScalarApiReference();
 
 app.MapDefaultEndpoints();
 
 app.Run();
-
-record WeatherForecast(
-    DateOnly Date,
-    int TemperatureC,
-    string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
