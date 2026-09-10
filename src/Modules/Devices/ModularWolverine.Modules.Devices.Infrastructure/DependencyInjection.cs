@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ModularWolverine.Modules.Devices.Application.Common.Contracts;
 
 namespace ModularWolverine.Modules.Devices.Infrastructure;
 
@@ -28,6 +29,8 @@ public static class DependencyInjection
                             DevicesDbContext.Schema);
                     });
                 });
+            
+            builder.Services.AddScoped<IDevicesDbContext>(sp => sp.GetRequiredService<DevicesDbContext>());
             return appBuilder;
         }
     }

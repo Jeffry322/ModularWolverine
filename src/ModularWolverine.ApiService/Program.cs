@@ -1,8 +1,10 @@
+using Microsoft.EntityFrameworkCore;
 using ModularWolverine.Modules.Devices.Infrastructure;
 using ModularWolverine.Modules.Telematics.Infrastructure;
 using ModularWolverine.Modules.Devices.Application;
 using ModularWolverine.Modules.Devices.Application.Common.Contracts;
 using ModularWolverine.Modules.Telematics.Application;
+using ModularWolverine.Modules.Telematics.Application.Common.Contracts;
 using ModulaWolverine.BuildingBlocks.Domain;
 using Scalar.AspNetCore;
 using Wolverine;
@@ -24,11 +26,11 @@ builder.Host.UseWolverine(options =>
 
     options.Policies.UseDurableLocalQueues();
     
-    options.Services.AddScoped<IDevicesDbContext>(sp =>
-        sp.GetRequiredService<DevicesDbContext>());
-    
     options.UseEntityFrameworkCoreTransactions()
         .WithDbContextAbstraction<IDevicesDbContext, DevicesDbContext>();
+    
+    options.UseEntityFrameworkCoreTransactions()
+        .WithDbContextAbstraction<ITelematicsDbContext, TelematicsDbContext>();
 
     options.PublishDomainEventsFromEntityFrameworkCore<Entity>(entity => entity.DomainEvents);
 });
@@ -47,8 +49,6 @@ builder.AddTelematicsModule(builder);
 
 builder.Services.AddScoped<ITelematicsEntrypoint, TelematicsEntrypoint>();
 
-builder.Services.AddScoped<IDevicesEntrypoint, DevicesEntrypoint>();
-
 var app = builder.Build();
 
 app.UseExceptionHandler();
@@ -58,6 +58,15 @@ app.MapWolverineEndpoints();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    
+    using var scope = app.Services.CreateScope();
+    var services = scope.ServiceProvider;
+    
+    var devicesDbContext = services.GetRequiredService<DevicesDbContext>();
+    var telematicsDbContext = services.GetRequiredService<TelematicsDbContext>();
+    
+    await devicesDbContext.Database.MigrateAsync();
+    await telematicsDbContext.Database.MigrateAsync();
 }
 
 app.MapScalarApiReference();

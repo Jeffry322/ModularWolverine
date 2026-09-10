@@ -1,9 +1,10 @@
 using Microsoft.EntityFrameworkCore;
+using ModularWolverine.Modules.Telematics.Application.Common.Contracts;
 
 namespace ModularWolverine.Modules.Telematics.Infrastructure;
 
 public sealed class TelematicsDbContext(DbContextOptions<TelematicsDbContext> options)
-    : DbContext(options)
+    : DbContext(options), ITelematicsDbContext
 {
     public const string Schema = "telematics";
     

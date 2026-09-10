@@ -3,7 +3,8 @@ var builder = DistributedApplication.CreateBuilder(args);
 var pgServer = builder
     .AddPostgres("application")
     .WithDataVolume()
-    .WithPgAdmin();
+    .WithPgAdmin()
+    .WithLifetime(ContainerLifetime.Persistent);
 
 var database = pgServer.AddDatabase("modular-wolverine");
 

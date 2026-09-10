@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using ModularWolverine.Modules.Devices.Domain.Devices;
 
-namespace ModularWolverine.Modules.Devices.Infrastructure.EntityConfigurations;
+namespace ModularWolverine.Modules.Devices.Infrastructure.Database.EntityConfigurations;
 
 internal sealed class DeviceConfiguration : IEntityTypeConfiguration<Device>
 {
@@ -29,7 +29,7 @@ internal sealed class DeviceConfiguration : IEntityTypeConfiguration<Device>
             .IsRequired()
             .HasColumnName("created_at_utc");
 
-        builder.Property<DeviceState>("_state")
+        builder.Property<DeviceState>("state")
             .HasConversion<string>();
     }
 }   

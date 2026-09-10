@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ModularWolverine.Modules.Telematics.Application.Common.Contracts;
 
 namespace ModularWolverine.Modules.Telematics.Infrastructure;
 
@@ -27,6 +29,8 @@ public static class DependencyInjection
                             TelematicsDbContext.Schema);
                     });
                 });
+            
+            builder.Services.AddScoped<ITelematicsDbContext>(sp => sp.GetRequiredService<TelematicsDbContext>());
             return appBuilder;
         }
     }
