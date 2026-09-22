@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ModularWolverine.Modules.Devices.Application.Common.Contracts;
+using ModularWolverine.Modules.Devices.Infrastructure.Database;
 
 namespace ModularWolverine.Modules.Devices.Infrastructure;
 
@@ -19,6 +20,7 @@ public static class DependencyInjection
         {
             appBuilder.AddNpgsqlDbContext<DevicesDbContext>(
                 connectionName: "modular-wolverine",
+                configureSettings: settings => settings.DisableRetry = true,
                 configureDbContextOptions: opts =>
                 {
                     opts.UseSnakeCaseNamingConvention();

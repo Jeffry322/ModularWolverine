@@ -19,6 +19,7 @@ public static class DependencyInjection
         {
             appBuilder.AddNpgsqlDbContext<TelematicsDbContext>(
                 connectionName: "modular-wolverine",
+                configureSettings: settings => settings.DisableRetry = true,
                 configureDbContextOptions: opts =>
                 {
                     opts.UseSnakeCaseNamingConvention();

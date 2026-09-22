@@ -18,6 +18,9 @@
         <Project Path="src/Modules/Devices/ModularWolverine.Modules.Devices.Infrastructure/ModularWolverine.Modules.Devices.Infrastructure.csproj" />
         <Project Path="src/Modules/Devices/ModularWolverine.Modules.Devices.IntegrationEvents/ModularWolverine.Modules.Devices.IntegrationEvents.csproj" />
     </Folder>
+    <Folder Name="/src/Modules/Devices/Tests/">
+        <Project Path="src/Modules/Devices/Tests/ModularWolverine.Modules.Devices.IntegrationTests/ModularWolverine.Modules.Devices.IntegrationTests.csproj" />
+    </Folder>
     <Folder Name="/src/Modules/Telematics/">
         <Project Path="src/Modules/Telematics/ModularWolverine.Modules.Telematics.Application/ModularWolverine.Modules.Telematics.Application.csproj" />
         <Project Path="src/Modules/Telematics/ModularWolverine.Modules.Telematics.Domain/ModularWolverine.Modules.Telematics.Domain.csproj" />

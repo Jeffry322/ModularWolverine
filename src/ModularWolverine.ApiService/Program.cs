@@ -1,8 +1,10 @@
 using Microsoft.EntityFrameworkCore;
+using ModularWolverine.ApiService;
 using ModularWolverine.Modules.Devices.Infrastructure;
 using ModularWolverine.Modules.Telematics.Infrastructure;
 using ModularWolverine.Modules.Devices.Application;
 using ModularWolverine.Modules.Devices.Application.Common.Contracts;
+using ModularWolverine.Modules.Devices.Infrastructure.Database;
 using ModularWolverine.Modules.Telematics.Application;
 using ModularWolverine.Modules.Telematics.Application.Common.Contracts;
 using ModulaWolverine.BuildingBlocks.Domain;
@@ -33,6 +35,10 @@ builder.Host.UseWolverine(options =>
         .WithDbContextAbstraction<ITelematicsDbContext, TelematicsDbContext>();
 
     options.PublishDomainEventsFromEntityFrameworkCore<Entity>(entity => entity.DomainEvents);
+    
+    options.CodeGeneration.Sources.Insert(
+        0,
+        new DevicesDbContextVariableSource());
 });
 
 builder.AddServiceDefaults();
