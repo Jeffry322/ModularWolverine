@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ModularWolverine.Modules.Devices.Infrastructure;
+using ModularWolverine.Modules.Devices.Infrastructure.Database;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ModularWolverine.Modules.Devices.Infrastructure.Database.Migrations
 {
     [DbContext(typeof(DevicesDbContext))]
-    [Migration("20260909115627_InitialDevices")]
+    [Migration("20260922143722_InitialDevices")]
     partial class InitialDevices
     {
         /// <inheritdoc />
@@ -30,25 +30,25 @@ namespace ModularWolverine.Modules.Devices.Infrastructure.Database.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasMaxLength(15)
                         .HasColumnType("uuid")
-                        .HasColumnName("id");
+                        .HasColumnName("imei");
 
-                    b.Property<DateTime>("_createdAtUtc")
+                    b.Property<DateTime>("CreatedAtUtc")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("created_at_utc");
 
-                    b.Property<string>("_imei")
+                    b.Property<string>("Imei")
                         .IsRequired()
-                        .HasMaxLength(15)
-                        .HasColumnType("character varying(15)")
+                        .HasColumnType("text")
                         .HasColumnName("imei");
 
-                    b.Property<string>("_name")
+                    b.Property<string>("Name")
                         .HasMaxLength(255)
                         .HasColumnType("character varying(255)")
                         .HasColumnName("name");
 
-                    b.Property<string>("state")
+                    b.Property<string>("State")
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("state");
@@ -56,11 +56,15 @@ namespace ModularWolverine.Modules.Devices.Infrastructure.Database.Migrations
                     b.HasKey("Id")
                         .HasName("pk_devices");
 
-                    b.HasIndex("_imei")
+                    b.HasIndex("Imei")
                         .IsUnique()
                         .HasDatabaseName("ix_devices_imei");
 
-                    b.ToTable("devices", "devices");
+                    b.ToTable("devices", "devices", t =>
+                        {
+                            t.Property("Imei")
+                                .HasColumnName("imei1");
+                        });
                 });
 #pragma warning restore 612, 618
         }

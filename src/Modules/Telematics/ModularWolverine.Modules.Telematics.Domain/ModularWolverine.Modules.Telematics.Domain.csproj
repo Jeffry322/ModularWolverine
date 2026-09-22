@@ -6,5 +6,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\BuildingBlocks\Domain\ModulaWolverine.BuildingBlocks.Domain.csproj" />
+    </ItemGroup>
+
 </Project>
 

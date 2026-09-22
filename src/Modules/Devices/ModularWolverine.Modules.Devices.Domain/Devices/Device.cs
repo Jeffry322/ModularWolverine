@@ -7,13 +7,13 @@ public class Device : Entity, IAggregateRoot
 {
     public Guid Id { get; private set; }
 
-    private string _imei;
+    public string Imei { get; private set; }
 
-    private string? _name;
+    public string? Name { get; private set; }
     
-    private DateTime _createdAtUtc;
+    public DateTime CreatedAtUtc { get; private set; }
     
-    private DeviceState _state;
+    public DeviceState State { get;  private set; }
 
     public static Device Create(
         string imei,
@@ -33,10 +33,10 @@ public class Device : Entity, IAggregateRoot
         DeviceState state)
     {
         Id = Guid.CreateVersion7();
-        _imei = imei;
-        _name = name;
-        _createdAtUtc = createdAtUtc;
-        _state = state;
+        Imei = imei;
+        Name = name;
+        CreatedAtUtc = createdAtUtc;
+        State = state;
 
         Raise(new DeviceCreatedDomainEvent(Id));
     }

@@ -19,22 +19,22 @@ namespace ModularWolverine.Modules.Devices.Infrastructure.Database.Migrations
                 schema: "devices",
                 columns: table => new
                 {
-                    id = table.Column<Guid>(type: "uuid", nullable: false),
-                    created_at_utc = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    imei = table.Column<string>(type: "character varying(15)", maxLength: 15, nullable: false),
+                    imei = table.Column<Guid>(type: "uuid", maxLength: 15, nullable: false),
+                    imei1 = table.Column<string>(type: "text", nullable: false),
                     name = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: true),
+                    created_at_utc = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     state = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("pk_devices", x => x.id);
+                    table.PrimaryKey("pk_devices", x => x.imei);
                 });
 
             migrationBuilder.CreateIndex(
                 name: "ix_devices_imei",
                 schema: "devices",
                 table: "devices",
-                column: "imei",
+                column: "imei1",
                 unique: true);
         }
 

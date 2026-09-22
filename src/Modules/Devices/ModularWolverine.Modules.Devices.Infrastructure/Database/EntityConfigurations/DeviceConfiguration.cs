@@ -12,24 +12,24 @@ internal sealed class DeviceConfiguration : IEntityTypeConfiguration<Device>
         
         builder.HasKey(x => x.Id);
 
-        builder.Property<string>("_imei")
+        builder.Property(d => d.Imei)
             .HasMaxLength(15)
             .IsRequired()
             .HasColumnName("imei");
         
-        builder.HasIndex("_imei")
+        builder.HasIndex(d => d.Imei)
             .IsUnique();
         
-        builder.Property<string>("_name")
+        builder.Property(d => d.Name)
             .HasMaxLength(255)
             .IsRequired(false)
             .HasColumnName("name");
         
-        builder.Property<DateTime>("_createdAtUtc")
+        builder.Property(d => d.CreatedAtUtc)
             .IsRequired()
             .HasColumnName("created_at_utc");
 
-        builder.Property<DeviceState>("state")
+        builder.Property(d => d.State)
             .HasConversion<string>();
     }
 }   

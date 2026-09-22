@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ModularWolverine.Modules.Telematics.Infrastructure.Database.Migrations
 {
     [DbContext(typeof(TelematicsDbContext))]
-    [Migration("20260909115631_InitialTelematics")]
+    [Migration("20260922143727_InitialTelematics")]
     partial class InitialTelematics
     {
         /// <inheritdoc />

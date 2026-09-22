@@ -1,6 +1,4 @@
 namespace ModularWolverine.Modules.Devices.Application;
 
-public static class AssemblyReference
-{
-}
+public static class AssemblyReference;
 

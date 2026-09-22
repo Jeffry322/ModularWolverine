@@ -9,53 +9,40 @@ namespace ModularWolverine.Modules.Devices.Application.Features.Devices.GetDevic
 
 public static class GetDeviceEndpoint
 {
-    public static string[] Validate(GetDeviceQuery query)
-    {
-        var hasId = !string.IsNullOrWhiteSpace(query.Id);
-        var hasImei = !string.IsNullOrWhiteSpace(query.Imei);
-
-        return (hasId, hasImei) switch
-        {
-            (false, false) => ["Either 'id' or 'imei' must be specified."],
-            (true, true)   => ["Specify either 'id' or 'imei', not both."],
-            _ => []
-        };
-    }
-    
     public static Task<GetDeviceResponse?> LoadAsync(
-        GetDeviceQuery query,
+        string identifier,
         IDevicesDbContext context,
         CancellationToken cancellationToken)
     {
         var databaseQuery = context.Devices.AsQueryable();
 
-        if (query.Imei is not null)
+        if (Guid.TryParse(identifier, out var guid))
         {
-            databaseQuery = databaseQuery.Where(d => query.Imei == EF.Property<string>(d,"_imei"));
+            databaseQuery = databaseQuery.Where(d => d.Id == guid);
         }
-        if (query.Id is not null)
+        else
         {
-            databaseQuery = databaseQuery.Where(d => query.Id == EF.Property<string>(d,"_id"));
+            databaseQuery = databaseQuery.Where(d => d.Imei == identifier);
         }
         
         return databaseQuery
             .Select(device => new GetDeviceResponse(
                 device.Id,
-                EF.Property<string>(device, "_imei"),
-                EF.Property<string?>(device, "_name")!))
+                device.Imei,
+                device.Name!))
             .SingleOrDefaultAsync(cancellationToken);
     }
     
     [Tags(new[] { "Devices", "Get"})]
     [WolverineGet(
-        "/api/devices",
+        "/api/devices/{identifier}",
         OperationId = "GetDeviceByIdentifier",
         Summary = "Retrieves a device by id or IMEI.",
         Description = "Retrieves a device by id or IMEI.")]
     [ProducesResponseType(typeof(GetDeviceResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public static GetDeviceResponse Get(
-        [FromQuery] GetDeviceQuery query,
+        string identifier,
         [Required] GetDeviceResponse? response)
     {
         return response!;
